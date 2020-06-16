@@ -1,0 +1,8 @@
+/* BASE */
+body {
+      background-color: #121212;
+      font-family: Helvetica, Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
