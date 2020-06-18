@@ -1,6 +1,3 @@
-//AOS
-AOS.init();
-
 // MANAV SEKSARIA
 anime.timeline()
       .add( {
