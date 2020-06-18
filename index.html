@@ -10,6 +10,7 @@
 
       <link rel="stylesheet" href="./css/index.css">
       <link rel="stylesheet" href="./css/indexanimations.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,19 +20,32 @@
 
 <body>
       <div class="plutonium"><br style="line-height: 0%;">Plutonium.</div>
-      <section>
-            <h1 class="ml5 name">
+      <navbar>
+            <h1 class="ml5 name head">
                   <span class="text-wrapper">
                         <span class="line line1"></span>
                         <span class="letters letters-left">Manav</span>
-                        <span class="letters letters-right">Seksaria</span>
+                        <span class="letters letters-right">Seksaria.</span>
                         <span class="line line2"></span>
                   </span>
             </h1>
+            <div class="links about head">About <span class="arrow">&rarr;</span></div>
+            <div class="links contact head">Contact <span class="arrow">&rarr;</span></div>
+            <div class="time foot" id="time"></div>
+            <div class="shift foot" id="shift"></div>
+
+            <h1 class="ml11 developer foot">
+                  <span class="text-wrapper">
+                        <span class="line line1"></span>
+                        <span class="letters">Developer</span>
+                  </span>
+            </h1>
+      </navbar>
+      <section class="landing">
 
             <div id="particle-slider" class="photo">
                   <div class="slides">
-                        <div class="slide" data-src="./plutonium.png">
+                        <div class="slide" style="box-shadow: 0 0 5px white;" data-src="./plutonium.png">
                         </div>
                   </div>
                   <canvas class="draw"></canvas>
@@ -40,24 +54,9 @@
             <div class="container">
                   <div class="text">Neo</div>
             </div>
-
-            <div class="links about">About <span class="arrow">&rarr;</span></div>
-            <div class="links contact">Contact <span class="arrow">&rarr;</span></div>
-
-            <h1 class="ml12 infosec">Cyber Security Researcher</h1>
-            <h1 class="ml11 developer">
-                  <span class="text-wrapper">
-                        <span class="line line1"></span>
-                        <span class="letters">Full Stack Developer</span>
-                  </span>
-            </h1>
       </section>
       <section>
-            <div class="sheets">
-                  <div class="sheet"></div>
-            </div>
-            <div class="ball">
-                  <div class="holder"></div>
+            <div class="sheets" id="projects">
             </div>
       </section>
 </body>

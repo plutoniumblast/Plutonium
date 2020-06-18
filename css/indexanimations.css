@@ -1,7 +1,7 @@
 /* MANAV SEKSARIA */
 .ml5 {
       position: relative;
-      color: #fff;
+      /* color: #fff; */
 }
 
 .ml5 .text-wrapper {
@@ -29,7 +29,7 @@ opacity: 0;
 
 /* FULL STACK DEV */
 .ml11 {
-color: white;
+color: #404040;
 }
 
 .ml11 .text-wrapper {
@@ -58,15 +58,6 @@ display: inline-block;
 line-height: 1em;
 }
 
-
-.ml12 {
-      color: white;
-}
-
-.ml12 .letter {
-display: inline-block;
-}
-
 @keyframes beats {
 	0% {
            transform: scale(1) translateX(0) translateY(0);
@@ -78,33 +69,5 @@ display: inline-block;
 
 	100% {
             transform: scale(1) translateX(0) translateY(0);
-	}
-}
-
-@keyframes motion {
-	0% {
-            transform: translateX(0) translateY(0);
-	}
-
-	50% {
-            transform: scale(1.01) translateX(2px) translateY(2px);
-	}
-
-	100% {
-            transform: translateX(0) translateY(0);
-	}
-}
-
-@keyframes shifts {
-	0% {
-            transform: scaleX(1);
-	}
-
-	50% {
-            transform: scaleX(1.1);
-	}
-
-	100% {
-            transform: scaleX(1);
 	}
 }

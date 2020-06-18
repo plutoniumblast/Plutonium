@@ -66,35 +66,13 @@ anime.timeline()
             delay: 100
       } );
 
-
-var textWrapper = document.querySelector( '.ml12' );
-textWrapper.innerHTML = textWrapper.textContent.replace( /\S/g, "<span class='letter'>$&</span>" );
-
-anime.timeline()
-      .add( {
-            targets: '.ml12 .letter',
-            translateX: [ 40, 0 ],
-            translateZ: 0,
-            opacity: [ 0, 1 ],
-            easing: "easeOutExpo",
-            duration: 1200,
-            delay: ( el, i ) => 500 + 30 * i
-      } ).add( {
-            targets: '.ml12 .letter',
-            opacity: 1,
-            easing: "easeInExpo",
-            duration: 1100,
-            delay: ( el, i ) => 100 + 30 * i
-      } );
-
-
 // ——————————————————————————————————————————————————
 // TextScramble
 // ——————————————————————————————————————————————————
 class TextScramble {
       constructor ( el ) {
             this.el = el;
-            this.chars = '!<>-_\\/[]{}—=+*^?#________';
+            this.chars = '!<>-_\\/[]{}—()|;:\'\"1234567890abcdefghijklmnopqrstvuwxyz@$%&=+*^?#';
             this.update = this.update.bind( this );
       }
 
@@ -170,7 +148,7 @@ class TextScramble {
 // ——————————————————————————————————————————————————
 
 
-const phrases = [ 'Neo,', 'Sooner or Later', 'You\'re going to realize', 'Just as I did', 'that there\'s a Difference', 'between Knowing the path', 'and Walking the path.' ];
+const phrases = [ 'Hi,', 'I\'m Manav,', 'Web Developer,', 'Cyber Security Researcher,', 'Freelancer', ];
 const el = document.querySelector( '.text' );
 const fx = new TextScramble( el );
 let counter = 0;

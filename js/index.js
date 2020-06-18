@@ -1,51 +1,55 @@
-$( document ).ready( function () {
-      var entries = [
-            { label: 'HTML', url: 'http://niklasknaack.blogspot.de/' },
-            { label: 'CSS', url: 'http://www.flashforum.de/' },
-            { label: 'jQuery', url: 'http://www.jqueryscript.net/' },
-            { label: 'Javascript', url: 'http://forum.jswelt.de/' },
-            { label: 'Vue.js', url: 'https://jsfiddle.net/user/NiklasKnaack/fiddles/' },
-            { label: 'Express.js', url: 'http://codepen.io/' },
-            { label: 'THREE.js', url: 'http://threejs.org/' },
-            { label: 'TensorFlow.js', url: 'http://webglstudio.org/' },
-            { label: 'q.js', url: 'http://jscompress.com/' },
-            { label: 'WebAssembly', url: 'https://tinypng.com/' },
-            { label: 'asm.js', url: 'http://caniuse.com/' },
-            { label: 'URL shortener', url: 'https://goo.gl/' },
-            { label: 'HTML Encoder', url: 'http://www.opinionatedgeek.com/DotNet/Tools/HTMLEncode/Encode.aspx' },
-            { label: 'Twitter', url: 'https://twitter.com/niklaswebdev' },
-            { label: 'deviantART', url: 'http://nkunited.deviantart.com/' },
-            { label: 'Gulp', url: 'http://gulpjs.com/' },
-            { label: 'Browsersync', url: 'https://www.browsersync.io/' },
-            { label: 'GitHub', url: 'https://github.com/' },
-            { label: 'Shadertoy', url: 'https://www.shadertoy.com/' },
-            { label: 'Starling', url: 'http://gamua.com/starling/' },
-            { label: 'jsPerf', url: 'http://jsperf.com/' },
-            { label: 'Foundation', url: 'http://foundation.zurb.com/' },
-            { label: 'CreateJS', url: 'http://createjs.com/' },
-            { label: 'Velocity.js', url: 'http://julian.com/research/velocity/' },
-            { label: 'TweenLite', url: 'https://greensock.com/docs/#/HTML5/GSAP/TweenLite/' },
-            { label: 'jQuery', url: 'https://jquery.com/' },
-            { label: 'jQuery Rain', url: 'http://www.jqueryrain.com/' },
-            { label: 'jQuery Plugins', url: 'http://jquery-plugins.net/' }, ];
-      var settings = {
+var date = new Date();
+document.getElementById( 'time' ).innerHTML = date.getHours() % 12 + ":" + date.getMinutes();
+console.log( date.getHours() % 12 + ":" + date.getMinutes() );
 
-            entries: entries,
-            width: 480,
-            height: 480,
-            radius: '65%',
-            radiusMin: 75,
-            bgDraw: false,
-            opacityOver: 1.00,
-            opacityOut: 0.05,
-            opacitySpeed: 6,
-            fov: 800,
-            speed: 1,
-            fontFamily: 'Oswald, Arial, sans-serif',
-            fontSize: '15',
-            fontColor: '#fff',
-            fontToUpperCase: true,
+var shift = [ "AM", "PM" ]
+if ( date.getHours() / 12 >= 1 ) {
+      document.getElementById( 'shift' ).innerHTML = shift[ 1 ];
+} else {
+      document.getElementById( 'shift' ).innerHTML = shift[ 0 ];
+}
 
-      };
-      $( '.holder' ).svg3DTagCloud( settings );
-} );
+var projects = [
+      {
+            Name: "Venugopalan Iyengar",
+            post: "President",
+      },
+      {
+            Name: "Vidit Parab",
+            post: "Vice President",
+      },
+];
+
+
+function List ( projects ) {
+      return `
+      <div class="sheet">
+            <div class="example-2 card">
+                  <div class="wrapper">
+                        <div class="header">
+                              <div class="date">
+                                    <span class="month">Aug</span>
+                                    <span class="year">2018</span>
+                              </div>
+                              <ul class="menu-content">
+                                    <li><a href="#" class="fa fa-heart-o"><span>18</span></a></li>
+                                    <li><a href="#" class="fa fa-comment-o"><span>3</span></a></li>
+                              </ul>
+                        </div>
+                        <div class="data">
+                              <div class="content">
+                                    <span class="author">BITS Pilani</span>
+                                    <h1 class="title"><a href="#">${projects.Name }</a></h1>
+                                    <p class="text">Software Used: Node.js (Vue.js), WebGL (Three.js),
+                                          Firebase, REST APIs, </p>
+                                    <a href="#" class="button">Check it Out</a>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </div>
+      `
+};
+
+document.getElementById( "projects" ).innerHTML = `
+      ${projects.map( List ).join( '' ) }`
