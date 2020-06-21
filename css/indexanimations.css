@@ -64,7 +64,7 @@ line-height: 1em;
 	}
 
 	50% {
-            transform: translateX(-4px) translateY(-2px);
+            transform: translateX(-2px) translateY(2px);
 	}
 
 	100% {

@@ -17,7 +17,6 @@ body {
 }
 
 section {
-	z-index: 0;
 	height: 100vh;
 	width: 100vw;
 	display: grid;
@@ -36,7 +35,7 @@ navbar {
 	display: grid;
 	grid-template-columns: repeat(9, 1fr);
 	grid-template-rows: repeat(6, 1fr);
-	z-index: 3
+	z-index: 2
 }
 
 .head {
@@ -106,21 +105,24 @@ navbar {
 }
 
 .sheets {
+  z-index: 3;
   display: flex;
   flex-wrap: nowrap;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
 }
 
 .sheet{
+  z-index: inherit;
   flex: 1 0 100%;
   scroll-snap-align: start;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
+  transform: translateY(-2.5em);
 }
 
 .plutonium {
@@ -161,8 +163,26 @@ h1 {
 }
 
 .card {
-	padding: 0 1.7rem;
-	width: 60vh
+	width: 25em;
+}
+
+.card:hover {
+	box-shadow: 0 0 20px black;
+}
+
+.overcard {
+	position: relative;
+	font-weight: bold;
+	font-family: 'Times New Roman', Times, serif;
+	z-index: 4;
+	font-size: 4em;
+	transform: rotate(-90deg) translateX(-3.75em) translateY(3.15em);
+}
+
+.card:hover + .overcard {
+	color: white;
+	text-shadow: 0 0 10px black;
+	font-size: 5em;
 }
 
 .card .menu-content {
@@ -200,14 +220,14 @@ h1 {
 }
 
 .card .wrapper {
-	background-color: #fff;
+	background-color: #000000;
 	min-height: 70vh;
 	position: relative;
 	overflow: hidden
 }
 
 .card .wrapper:hover .data {
-	transform: translateY(0)
+  transform: translateY(0);
 }
 
 .card .data {
@@ -237,12 +257,8 @@ h1 {
 	margin: 0
 }
 
-.example-2 .wrapper {
-	background: url(https://tvseriescritic.files.wordpress.com/2016/10/stranger-things-bicycle-lights-children.jpg) center/cover no-repeat
-}
-
 .example-2 .wrapper:hover .menu-content span {
-	transform: translate(-50%, -10px);
+  transform: translate(-50%, -10px);
 	opacity: 1
 }
 
@@ -312,6 +328,6 @@ h1 {
 }
 
 .example-2 .button:hover::after {
-	transform: translate(5px, -50%);
+  transform: translate(5px, -50%);
 	opacity: 1
 }
