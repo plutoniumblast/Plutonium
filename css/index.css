@@ -151,7 +151,6 @@ navbar {
 	height: 100vh;
 	grid-column: 1/5;
 	grid-row: 4/8;
-	animation: beats 2s infinite
 }
 a {
 	text-decoration: none
