@@ -1,5 +1,6 @@
 * {
-	box-sizing: border-box
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
 }
 
 body {
@@ -165,17 +166,17 @@ h1 {
 	width: 25em;
 }
 
-.card:hover {
-	box-shadow: 0 0 20px black;
-}
-
 .overcard {
 	position: relative;
 	font-weight: bold;
 	font-family: 'Times New Roman', Times, serif;
-	z-index: 4;
-	font-size: 4em;
-	transform: rotate(-90deg) translateX(-3.75em) translateY(3.15em);
+	z-index: 0;
+	text-align: center;
+	font-size: 7.5em;
+	width: 250%;
+	-webkit-text-stroke: 0.005em white;
+	-webkit-text-fill-color: transparent;
+	transform: translateX(-2.5em) translateY(0.33em);
 }
 
 .card:hover + .overcard {
@@ -222,7 +223,7 @@ h1 {
 	background-color: #000000;
 	min-height: 70vh;
 	position: relative;
-	overflow: hidden
+	overflow: hidden;
 }
 
 .card .wrapper:hover .data {

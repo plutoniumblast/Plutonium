@@ -73,7 +73,7 @@ function List ( projects ) {
       return `
       <div class="sheet">
       <div class="example-2 card">
-      <div class="overcard" style="color: ${projects.color };">${ projects.name }</div>
+      <div class="overcard">${ projects.name }</div>
                   <div class="wrapper" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${projects.image }) center/cover no-repeat">
                         <div class="header">
                               <div class="date">
